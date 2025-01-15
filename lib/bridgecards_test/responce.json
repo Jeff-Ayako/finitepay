@@ -1,0 +1,922 @@
+{
+    "detail": [
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'NIGERIAN_NIN', 'NIGERIAN_INTERNATIONAL_PASSPORT', 'NIGERIAN_PVC', 'NIGERIAN_DRIVERS_LICENSE', 'NIGERIAN_NIN_IMAGE', 'NIGERIAN_INTERNATIONAL_PASSPORT_IMAGE', 'NIGERIAN_PVC_IMAGE', 'NIGERIAN_DRIVERS_LICENSE_IMAGE', 'NIGERIAN_BVN_VERIFICATION', 'NIGERIAN_BVN_OTP_VERIFICATION', 'NIGERIAN_NIN_QUIDAX', 'NIGERIAN_INTERNATIONAL_PASSPORT_QUIDAX', 'NIGERIAN_PVC_QUIDAX', 'NIGERIAN_DRIVERS_LICENSE_QUIDAX', 'NIGERIAN_NIN_GREY', 'NIGERIAN_INTERNATIONAL_PASSPORT_GREY', 'NIGERIAN_PVC_GREY', 'NIGERIAN_DRIVERS_LICENSE_GREY'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "NIGERIAN_NIN",
+                    "NIGERIAN_INTERNATIONAL_PASSPORT",
+                    "NIGERIAN_PVC",
+                    "NIGERIAN_DRIVERS_LICENSE",
+                    "NIGERIAN_NIN_IMAGE",
+                    "NIGERIAN_INTERNATIONAL_PASSPORT_IMAGE",
+                    "NIGERIAN_PVC_IMAGE",
+                    "NIGERIAN_DRIVERS_LICENSE_IMAGE",
+                    "NIGERIAN_BVN_VERIFICATION",
+                    "NIGERIAN_BVN_OTP_VERIFICATION",
+                    "NIGERIAN_NIN_QUIDAX",
+                    "NIGERIAN_INTERNATIONAL_PASSPORT_QUIDAX",
+                    "NIGERIAN_PVC_QUIDAX",
+                    "NIGERIAN_DRIVERS_LICENSE_QUIDAX",
+                    "NIGERIAN_NIN_GREY",
+                    "NIGERIAN_INTERNATIONAL_PASSPORT_GREY",
+                    "NIGERIAN_PVC_GREY",
+                    "NIGERIAN_DRIVERS_LICENSE_GREY"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'MONERO_PRIVACY'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "MONERO_PRIVACY"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'GHANIAN_SSNIT', 'GHANIAN_VOTERS_ID', 'GHANIAN_DRIVERS_LICENSE', 'GHANIAN_INTERNATIONAL_PASSPORT', 'GHANIAN_GHANA_CARD'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "GHANIAN_SSNIT",
+                    "GHANIAN_VOTERS_ID",
+                    "GHANIAN_DRIVERS_LICENSE",
+                    "GHANIAN_INTERNATIONAL_PASSPORT",
+                    "GHANIAN_GHANA_CARD"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'UGANDA_VOTERS_ID', 'UGANDA_DRIVERS_LICENSE', 'UGANDA_NATIONAL_ID', 'UGANDA_PASSPORT'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "UGANDA_VOTERS_ID",
+                    "UGANDA_DRIVERS_LICENSE",
+                    "UGANDA_NATIONAL_ID",
+                    "UGANDA_PASSPORT"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'KENYAN_NATIONAL_ID', 'KENYAN_ALIEN_CARD', 'KENYAN_PASSPORT', 'KENYAN_REFUGEE_ID', 'KENYAN_DRIVERS_LICENSE'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "KENYAN_NATIONAL_ID",
+                    "KENYAN_ALIEN_CARD",
+                    "KENYAN_PASSPORT",
+                    "KENYAN_REFUGEE_ID",
+                    "KENYAN_DRIVERS_LICENSE"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'MALAWI_NATIONAL_ID', 'MALAWI_DRIVERS_LICENSE', 'MALAWI_PASSPORT', 'MALAWI_RESIDENT_CARD'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "MALAWI_NATIONAL_ID",
+                    "MALAWI_DRIVERS_LICENSE",
+                    "MALAWI_PASSPORT",
+                    "MALAWI_RESIDENT_CARD"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'CONGO_DRIVERS_LICENSE', 'CONGO_PASSPORT', 'CONGO_NATIONAL_ID'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "CONGO_DRIVERS_LICENSE",
+                    "CONGO_PASSPORT",
+                    "CONGO_NATIONAL_ID"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'CONGO_BRAZZAVILLE_DRIVERS_LICENSE', 'CONGO_BRAZZAVILLE_PASSPORT', 'CONGO_BRAZZAVILLE_NATIONAL_ID'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "CONGO_BRAZZAVILLE_DRIVERS_LICENSE",
+                    "CONGO_BRAZZAVILLE_PASSPORT",
+                    "CONGO_BRAZZAVILLE_NATIONAL_ID"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'CAMEROON_NATIONAL_ID', 'CAMEROON_PASSPORT', 'CAMEROON_DRIVERS_LICENSE', 'CAMEROON_VOTER_ID', 'CAMEROON_RESIDENT_CARD', 'CAMEROON_KYC_KEECASH'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "CAMEROON_NATIONAL_ID",
+                    "CAMEROON_PASSPORT",
+                    "CAMEROON_DRIVERS_LICENSE",
+                    "CAMEROON_VOTER_ID",
+                    "CAMEROON_RESIDENT_CARD",
+                    "CAMEROON_KYC_KEECASH"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'GABON_NATIONAL_ID', 'GABON_PASSPORT', 'GABON_RESIDENT_CARD', 'GABON_HEALTH_INSURANCE_ID'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "GABON_NATIONAL_ID",
+                    "GABON_PASSPORT",
+                    "GABON_RESIDENT_CARD",
+                    "GABON_HEALTH_INSURANCE_ID"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'ANGOLA_NATIONAL_ID', 'ANGOLA_DRIVERS_LICENSE', 'ANGOLA_PASSPORT', 'ANGOLA_RESIDENT_CARD', 'ANGOLA_REFUGEE_CARD', 'ANGOLA_VOTER_ID'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "ANGOLA_NATIONAL_ID",
+                    "ANGOLA_DRIVERS_LICENSE",
+                    "ANGOLA_PASSPORT",
+                    "ANGOLA_RESIDENT_CARD",
+                    "ANGOLA_REFUGEE_CARD",
+                    "ANGOLA_VOTER_ID"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'EGYPT_NATIONAL_ID', 'EGYPT_DRIVERS_LICENSE', 'EGYPT_PASSPORT', 'EGYPT_RESIDENT_CARD'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "EGYPT_NATIONAL_ID",
+                    "EGYPT_DRIVERS_LICENSE",
+                    "EGYPT_PASSPORT",
+                    "EGYPT_RESIDENT_CARD"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'MALI_NATIONAL_ID', 'MALI_PASSPORT'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "MALI_NATIONAL_ID",
+                    "MALI_PASSPORT"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'SENEGAL_NATIONAL_ID', 'SENEGAL_ECOWAS_ID', 'SENEGAL_PASSPORT'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "SENEGAL_NATIONAL_ID",
+                    "SENEGAL_ECOWAS_ID",
+                    "SENEGAL_PASSPORT"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'BURKINAFASO_NATIONAL_ID', 'BURKINAFASO_PASSPORT', 'BURKINAFASO_DRIVERS_LICENSE', 'BURKINAFASO_VOTER_ID'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "BURKINAFASO_NATIONAL_ID",
+                    "BURKINAFASO_PASSPORT",
+                    "BURKINAFASO_DRIVERS_LICENSE",
+                    "BURKINAFASO_VOTER_ID"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'BENIN_REPUBLIC_NATIONAL_ID', 'BENIN_REPUBLIC_PASSPORT', 'BENIN_REPUBLIC_DRIVERS_LICENSE', 'BENIN_REPUBLIC_VOTER_ID', 'BENIN_REPUBLIC_RESIDENT_CARD', 'BENIN_REPUBLIC_ECOWAS_ID', 'BENIN_REPUBLIC_CIP'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "BENIN_REPUBLIC_NATIONAL_ID",
+                    "BENIN_REPUBLIC_PASSPORT",
+                    "BENIN_REPUBLIC_DRIVERS_LICENSE",
+                    "BENIN_REPUBLIC_VOTER_ID",
+                    "BENIN_REPUBLIC_RESIDENT_CARD",
+                    "BENIN_REPUBLIC_ECOWAS_ID",
+                    "BENIN_REPUBLIC_CIP"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'IVORYCOAST_NATIONAL_ID', 'IVORYCOAST_DRIVERS_LICENSE', 'IVORYCOAST_PASSPORT', 'IVORYCOAST_RESIDENT_CARD', 'IVORYCOAST_HEALTH_INSURANCE_ID'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "IVORYCOAST_NATIONAL_ID",
+                    "IVORYCOAST_DRIVERS_LICENSE",
+                    "IVORYCOAST_PASSPORT",
+                    "IVORYCOAST_RESIDENT_CARD",
+                    "IVORYCOAST_HEALTH_INSURANCE_ID"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'MOROCCO_NATIONAL_ID', 'MOROCCO_PASSPORT', 'MOROCCO_DRIVERS_LICENSE', 'MOROCCO_RESIDENT_CARD'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "MOROCCO_NATIONAL_ID",
+                    "MOROCCO_PASSPORT",
+                    "MOROCCO_DRIVERS_LICENSE",
+                    "MOROCCO_RESIDENT_CARD"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'TUNISIA_PASSPORT', 'TUNISIA_DRIVERS_LICENSE'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "TUNISIA_PASSPORT",
+                    "TUNISIA_DRIVERS_LICENSE"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'ALGERIA_PASSPORT', 'ALGERIA_NATIONAL_ID', 'ALGERIA_DRIVERS_LICENSE'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "ALGERIA_PASSPORT",
+                    "ALGERIA_NATIONAL_ID",
+                    "ALGERIA_DRIVERS_LICENSE"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'ZAMBIA_DRIVERS_LICENSE', 'ZAMBIA_NATIONAL_ID', 'ZAMBIA_PASSPORT'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "ZAMBIA_DRIVERS_LICENSE",
+                    "ZAMBIA_NATIONAL_ID",
+                    "ZAMBIA_PASSPORT"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'INDIA_NATIONAL_ID', 'INDIA_PASSPORT', 'INDIA_DRIVERS_LICENSE'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "INDIA_NATIONAL_ID",
+                    "INDIA_PASSPORT",
+                    "INDIA_DRIVERS_LICENSE"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'HAITI_NATIONAL_ID', 'HAITI_PASSPORT', 'HAITI_DRIVERS_LICENSE'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "HAITI_NATIONAL_ID",
+                    "HAITI_PASSPORT",
+                    "HAITI_DRIVERS_LICENSE"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'BRAZIL_NATIONAL_ID_TRUSEXPENSE', 'BRAZIL_NATIONAL_ID', 'BRAZIL_PASSPORT'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "BRAZIL_NATIONAL_ID_TRUSEXPENSE",
+                    "BRAZIL_NATIONAL_ID",
+                    "BRAZIL_PASSPORT"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'COLOMBIA_NATIONAL_ID_TRUSEXPENSE', 'COLOMBIA_NATIONAL_ID', 'COLOMBIA_PASSPORT'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "COLOMBIA_NATIONAL_ID_TRUSEXPENSE",
+                    "COLOMBIA_NATIONAL_ID",
+                    "COLOMBIA_PASSPORT"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'ARGENTINA_NATIONAL_ID_TRUSEXPENSE', 'ARGENTINA_NATIONAL_ID', 'ARGENTINA_PASSPORT'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "ARGENTINA_NATIONAL_ID_TRUSEXPENSE",
+                    "ARGENTINA_NATIONAL_ID",
+                    "ARGENTINA_PASSPORT"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'MEXICO_NATIONAL_ID_TRUSEXPENSE', 'MEXICO_NATIONAL_ID', 'MEXICO_PASSPORT'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "MEXICO_NATIONAL_ID_TRUSEXPENSE",
+                    "MEXICO_NATIONAL_ID",
+                    "MEXICO_PASSPORT"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'CHILE_NATIONAL_ID_TRUSEXPENSE', 'CHILE_NATIONAL_ID', 'CHILE_PASSPORT'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "CHILE_NATIONAL_ID_TRUSEXPENSE",
+                    "CHILE_NATIONAL_ID",
+                    "CHILE_PASSPORT"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'TOGO_DRIVERS_LICENSE', 'TOGO_PASSPORT', 'TOGO_NATIONAL_ID', 'TOGO_RESIDENT_CARD', 'TOGO_VOTER_ID'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "TOGO_DRIVERS_LICENSE",
+                    "TOGO_PASSPORT",
+                    "TOGO_NATIONAL_ID",
+                    "TOGO_RESIDENT_CARD",
+                    "TOGO_VOTER_ID"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'NIGER_DRIVERS_LICENSE', 'NIGER_PASSPORT'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "NIGER_DRIVERS_LICENSE",
+                    "NIGER_PASSPORT"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'GUINEA_DRIVERS_LICENSE', 'GUINEA_PASSPORT', 'GUINEA_NATIONAL_ID', 'GUINEA_ECOWAS_ID', 'GUINEA_VOTER_ID'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "GUINEA_DRIVERS_LICENSE",
+                    "GUINEA_PASSPORT",
+                    "GUINEA_NATIONAL_ID",
+                    "GUINEA_ECOWAS_ID",
+                    "GUINEA_VOTER_ID"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'SIERRA_LEONE_NATIONAL_ID', 'SIERRA_LEONE_DRIVERS_LICENSE', 'SIERRA_LEONE_PASSPORT', 'SIERRA_LEONE_VOTER_ID'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "SIERRA_LEONE_NATIONAL_ID",
+                    "SIERRA_LEONE_DRIVERS_LICENSE",
+                    "SIERRA_LEONE_PASSPORT",
+                    "SIERRA_LEONE_VOTER_ID"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'UNITED_KINGDOM_INTERNATIONAL_PASSPORT', 'INTERNATIONAL_PASSPORT_PAYOURSE'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "UNITED_KINGDOM_INTERNATIONAL_PASSPORT",
+                    "INTERNATIONAL_PASSPORT_PAYOURSE"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'UNITED_STATES_INTERNATIONAL_PASSPORT', 'UNITED_STATES_DRIVERS_LICENSE', 'UNITED_STATES_RESIDENCE_CARD', 'INTERNATIONAL_PASSPORT_PAYOURSE'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "UNITED_STATES_INTERNATIONAL_PASSPORT",
+                    "UNITED_STATES_DRIVERS_LICENSE",
+                    "UNITED_STATES_RESIDENCE_CARD",
+                    "INTERNATIONAL_PASSPORT_PAYOURSE"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'CANADA_INTERNATIONAL_PASSPORT', 'CANADA_DRIVERS_LICENSE'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "CANADA_INTERNATIONAL_PASSPORT",
+                    "CANADA_DRIVERS_LICENSE"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'SOUTHAFRICAN_NATIONAL_ID', 'SOUTHAFRICAN_DRIVERS_LICENSE', 'SOUTHAFRICAN_GREEN_BOOK', 'SOUTHAFRICAN_PASSPORT', 'SOUTHAFRICAN_RESIDENT_CARD'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "SOUTHAFRICAN_NATIONAL_ID",
+                    "SOUTHAFRICAN_DRIVERS_LICENSE",
+                    "SOUTHAFRICAN_GREEN_BOOK",
+                    "SOUTHAFRICAN_PASSPORT",
+                    "SOUTHAFRICAN_RESIDENT_CARD"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'UNITED_ARAB_EMIRATES_DRIVERS_LICENSE', 'UNITED_ARAB_EMIRATES_HEALTH_CARD', 'UNITED_ARAB_EMIRATES_NATIONAL_ID', 'UNITED_ARAB_EMIRATES_PASSPORT', 'UNITED_ARAB_EMIRATES_WORK_PERMIT'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "UNITED_ARAB_EMIRATES_DRIVERS_LICENSE",
+                    "UNITED_ARAB_EMIRATES_HEALTH_CARD",
+                    "UNITED_ARAB_EMIRATES_NATIONAL_ID",
+                    "UNITED_ARAB_EMIRATES_PASSPORT",
+                    "UNITED_ARAB_EMIRATES_WORK_PERMIT"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_type"
+            ],
+            "msg": "value is not a valid enumeration member; permitted: 'REST_OF_THE_WORLD_INTERNATIONAL_PASSPORT', 'REST_OF_THE_WORLD_DRIVERS_LICENSE', 'REST_OF_THE_WORLD_NATIONAL_ID'",
+            "type": "type_error.enum",
+            "ctx": {
+                "enum_values": [
+                    "REST_OF_THE_WORLD_INTERNATIONAL_PASSPORT",
+                    "REST_OF_THE_WORLD_DRIVERS_LICENSE",
+                    "REST_OF_THE_WORLD_NATIONAL_ID"
+                ]
+            }
+        },
+        {
+            "loc": [
+                "body",
+                "identity",
+                "id_image"
+            ],
+            "msg": "field required",
+            "type": "value_error.missing"
+        }
+    ]
+}

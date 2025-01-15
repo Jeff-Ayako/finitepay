@@ -1,0 +1,263 @@
+{
+  "project_info": {
+    "project_number": "649781205611",
+    "firebase_url": "https://mpesa-flutter-default-rtdb.firebaseio.com",
+    "project_id": "mpesa-flutter",
+    "storage_bucket": "mpesa-flutter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649781205611:android:05a27e32beb605ddfaaf2e",
+        "android_client_info": {
+          "package_name": "com.example.finitepay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649781205611-rs24040np4hdu5flguc5bmjea74a76k2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFRPaoz9jPn96H0oUX2ZBtsaG7rhSXKsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649781205611-rs24040np4hdu5flguc5bmjea74a76k2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "649781205611-3aiigmq2toltvbg6jmuhe4d5jatqm7s1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mpesaFlutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649781205611:android:019aa0d983e13b1afaaf2e",
+        "android_client_info": {
+          "package_name": "com.example.mpesa_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649781205611-rs24040np4hdu5flguc5bmjea74a76k2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFRPaoz9jPn96H0oUX2ZBtsaG7rhSXKsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649781205611-rs24040np4hdu5flguc5bmjea74a76k2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "649781205611-3aiigmq2toltvbg6jmuhe4d5jatqm7s1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mpesaFlutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649781205611:android:0c7051285edd0c02faaf2e",
+        "android_client_info": {
+          "package_name": "com.finite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649781205611-rs24040np4hdu5flguc5bmjea74a76k2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFRPaoz9jPn96H0oUX2ZBtsaG7rhSXKsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649781205611-rs24040np4hdu5flguc5bmjea74a76k2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "649781205611-3aiigmq2toltvbg6jmuhe4d5jatqm7s1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mpesaFlutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649781205611:android:d22b1195f2a3aed3faaf2e",
+        "android_client_info": {
+          "package_name": "com.finitepay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649781205611-rs24040np4hdu5flguc5bmjea74a76k2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFRPaoz9jPn96H0oUX2ZBtsaG7rhSXKsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649781205611-rs24040np4hdu5flguc5bmjea74a76k2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "649781205611-3aiigmq2toltvbg6jmuhe4d5jatqm7s1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mpesaFlutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649781205611:android:4f0af4c95600c1d4faaf2e",
+        "android_client_info": {
+          "package_name": "com.finitepay.multicurrency"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649781205611-rs24040np4hdu5flguc5bmjea74a76k2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFRPaoz9jPn96H0oUX2ZBtsaG7rhSXKsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649781205611-rs24040np4hdu5flguc5bmjea74a76k2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "649781205611-3aiigmq2toltvbg6jmuhe4d5jatqm7s1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mpesaFlutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649781205611:android:23dee114602d0289faaf2e",
+        "android_client_info": {
+          "package_name": "com.finitepay.org"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649781205611-rs24040np4hdu5flguc5bmjea74a76k2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFRPaoz9jPn96H0oUX2ZBtsaG7rhSXKsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649781205611-rs24040np4hdu5flguc5bmjea74a76k2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "649781205611-3aiigmq2toltvbg6jmuhe4d5jatqm7s1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mpesaFlutter"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649781205611:android:f08afd547dd194a8faaf2e",
+        "android_client_info": {
+          "package_name": "com.finitpay.org"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "649781205611-rs24040np4hdu5flguc5bmjea74a76k2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFRPaoz9jPn96H0oUX2ZBtsaG7rhSXKsc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "649781205611-rs24040np4hdu5flguc5bmjea74a76k2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "649781205611-3aiigmq2toltvbg6jmuhe4d5jatqm7s1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mpesaFlutter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
