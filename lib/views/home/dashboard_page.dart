@@ -114,13 +114,23 @@ class DashPage extends StatelessWidget {
                         backgroundColor:
                             Theme.of(context).appBarTheme.backgroundColor,
                         elevation: 1,
-                        title: const Text(
-                          'FinitePay',
-                          style: TextStyle(
-                              color: Color(0xFF5A31F4),
-                              fontSize: 24,
-                              fontWeight: FontWeight.bold),
+                        title: InkWell(
+                          onTap: () {
+                            cardsController.getIfcardWasIssued();
+                          },
+                          child: Image.asset(
+                            'assets/finitepay2.png',
+                            color: Color(0xFF5A31F4),
+                            width: 200,
+                          ),
                         ),
+                        // const Text(
+                        //   'FinitePay',
+                        //   style: TextStyle(
+                        //       color: Color(0xFF5A31F4),
+                        //       fontSize: 24,
+                        //       fontWeight: FontWeight.bold),
+                        // ),
                         centerTitle: false,
                         actions: [
                           // Btn(
@@ -129,18 +139,19 @@ class DashPage extends StatelessWidget {
                           //   btnName: 'TestMode',
                           //   color: Colors.red,
                           // ),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.red,
-                            ),
-                            onPressed: () {},
-                            child: const Text(
-                              "TestMode",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
+                          // ElevatedButton(
+                          //   style: ElevatedButton.styleFrom(
+                          //     backgroundColor: Colors.red,
+                          //   ),
+                          //   onPressed: () {},
+                          //   child: const Text(
+                          //     "TestMode",
+                          //     style: TextStyle(
+                          //       color: Colors.white,
+                          //     ),
+                          //   ),
+                          // ),
+
                           TextButton(
                             onPressed: () {},
                             child: Row(

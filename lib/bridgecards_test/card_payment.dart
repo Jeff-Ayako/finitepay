@@ -1,4 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:finitepay/bridgecards_test/payments_listener_page.dart';
 import 'package:finitepay/components/overrall_btn.dart';
@@ -91,6 +92,19 @@ class _CardPaymentPageState extends State<CardPaymentPage> {
           _closeDialog();
           cardsController.mpesaMerchantID.value = result["result"].toString();
           cardsController.mpesaMerchantID.refresh();
+          FirebaseFirestore.instance
+              .collection('MpesaPaymentIDS')
+              .doc(authenticationController.userDetails.value.email)
+              .set({
+                'MerchantID':cardsController.mpesaMerchantID.value,
+                'WasCardIssued':false,
+                'WasPaymentMade':false,
+                "AmountInKes": amount ,
+                "AmountInUsdCents": cardsController.cardAmountInCents.value.toStringAsFixed(0) ,
+                'CustomerUID':authenticationController.userDetails.value.uid,
+                'CustomerEmail':authenticationController.userDetails.value.email
+              });
+
           Get.to(() => PaymentStatusScreen(
                     transactionId: result["result"],
                   ))!

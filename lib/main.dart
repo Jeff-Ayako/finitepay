@@ -7,7 +7,6 @@ import 'package:finitepay/modes/lightmode.dart';
 import 'package:finitepay/views/authenication/login_page.dart';
 import 'package:finitepay/views/home/dashboard_page.dart';
 import 'package:finitepay/views/internet/no_connection.dart';
-// import 'package:finitepay/views/test_counter.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';

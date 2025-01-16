@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:email_validator/email_validator.dart';
-import 'package:finitepay/components/overrall_btn.dart';
+// import 'package:finitepay/components/overrall_btn.dart';
 // import 'package:finitepay/components/drop_down_btn.dart';
 import 'package:finitepay/components/progressdialog.dart';
 import 'package:finitepay/controllers/init_controllers.dart';
@@ -112,7 +112,9 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
           maincontroller.phoneNoController.text.trim();
       authenticationController.userDetails.value.age = 18;
       authenticationController.userDetails.value.businessName =
-          maincontroller.businessName.text.toString();
+          authenticationController.userDetails.value.fullname
+              .toString(); //authenticationController.userDetails.value.fullname
+      //maincontroller.businessName.text.toString();
 
       authenticationController.userDetails.value.onboardingDone = false;
 
@@ -844,15 +846,16 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                                       ? "Enter a valid phone number"
                                       : null,
                             ),
-                            txtForm(
-                              'Business Name',
-                              maincontroller.businessName,
-                              (value) => (value!.trim().isEmpty)
-                                  ? "Full Name is required"
-                                  : (value.trim().length < 2)
-                                      ? "Enter a valid Full Name"
-                                      : null,
-                            ),
+                            // txtForm(
+                            //   'Business Name',
+                            //   maincontroller.businessName,
+                            //   (value) => (value!.trim().isEmpty)
+                            //       ? "Full Name is required"
+                            //       : (value.trim().length < 2)
+                            //           ? "Enter a valid Full Name"
+                            //           : null,
+                            // ),
+
                             txtForm(
                               'Enter Your Email',
                               maincontroller.emailController,
@@ -889,15 +892,15 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                             // // ),
 
                             // const SizedBox(height: 16.0),
-                            txtForm(
-                              'Postal Code',
-                              maincontroller.postalController,
-                              (value) => (value!.trim().isEmpty)
-                                  ? "Postal Code is required"
-                                  : (value.trim().length < 2)
-                                      ? "Enter a valid Postal Code"
-                                      : null,
-                            ),
+                            // txtForm(
+                            //   'Postal Code',
+                            //   maincontroller.postalController,
+                            //   (value) => (value!.trim().isEmpty)
+                            //       ? "Postal Code is required"
+                            //       : (value.trim().length < 2)
+                            //           ? "Enter a valid Postal Code"
+                            //           : null,
+                            // ),
                             txtForm(
                               'National ID Number',
                               maincontroller.nationalIdController,
@@ -907,74 +910,75 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                                       ? "Enter a valid National ID Number"
                                       : null,
                             ),
-                            Center(
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: <Widget>[
-                                  Obx(
-                                    () => Text(
-                                      maincontroller.selectedDate.value != null
-                                          ? 'Selected Date: ${DateFormat('yyyy-MM-dd').format(maincontroller.selectedDate.value)}'
-                                          : 'No date selected',
-                                    ),
-                                  ),
-                                  const SizedBox(height: 20),
-                                  Btn(
-                                    txtColor: Colors.black,
-                                    ontap: () => maincontroller.selectDate(
-                                        context, true),
-                                    btnName: 'Select Date of Birth',
-                                    color: Colors.transparent,
-                                  ),
-                                  // ElevatedButton(
-                                  //   onPressed: () =>
-                                  //       maincontroller.selectDate(context),
-                                  //   child: const Text('Select Date of Birth'),
-                                  // ),
-                                ],
-                              ),
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Expanded(
-                                  child: Obx(
-                                    () => ListTile(
-                                      title: const Text('Individual'),
-                                      leading: Radio<String>(
-                                        value: 'individual',
-                                        groupValue: maincontroller
-                                            .companyOrIndividual.value,
-                                        onChanged: (String? value) {
-                                          // setState(() {
-                                          maincontroller.companyOrIndividual
-                                              .value = value!;
-                                          // });
-                                        },
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Expanded(
-                                  child: Obx(
-                                    () => ListTile(
-                                      title: const Text('Company'),
-                                      leading: Radio<String>(
-                                        value: 'company',
-                                        groupValue: maincontroller
-                                            .companyOrIndividual.value,
-                                        onChanged: (String? value) {
-                                          // setState(() {
-                                          maincontroller.companyOrIndividual
-                                              .value = value!;
-                                          // });
-                                        },
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                            // Center(
+                            //   child: Column(
+                            //     mainAxisAlignment: MainAxisAlignment.center,
+                            //     children: <Widget>[
+                            //       // Obx(
+                            //       //   () => Text(
+                            //       //     maincontroller.selectedDate.value != null
+                            //       //         ? 'Selected Date: ${DateFormat('yyyy-MM-dd').format(maincontroller.selectedDate.value)}'
+                            //       //         : 'No date selected',
+                            //       //   ),
+                            //       // ),
+                            //       // const SizedBox(height: 20),
+                            //       // Btn(
+                            //       //   txtColor: Colors.black,
+                            //       //   ontap: () => maincontroller.selectDate(
+                            //       //       context, true),
+                            //       //   btnName: 'Select Date of Birth',
+                            //       //   color: Colors.transparent,
+                            //       // ),
+                            //       // ElevatedButton(
+                            //       //   onPressed: () =>
+                            //       //       maincontroller.selectDate(context),
+                            //       //   child: const Text('Select Date of Birth'),
+                            //       // ),
+                            //     ],
+                            //   ),
+                            // ),
+
+                            // Row(
+                            //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            //   children: [
+                            //     Expanded(
+                            //       child: Obx(
+                            //         () => ListTile(
+                            //           title: const Text('Individual'),
+                            //           leading: Radio<String>(
+                            //             value: 'individual',
+                            //             groupValue: maincontroller
+                            //                 .companyOrIndividual.value,
+                            //             onChanged: (String? value) {
+                            //               // setState(() {
+                            //               maincontroller.companyOrIndividual
+                            //                   .value = value!;
+                            //               // });
+                            //             },
+                            //           ),
+                            //         ),
+                            //       ),
+                            //     ),
+                            //     Expanded(
+                            //       child: Obx(
+                            //         () => ListTile(
+                            //           title: const Text('Company'),
+                            //           leading: Radio<String>(
+                            //             value: 'company',
+                            //             groupValue: maincontroller
+                            //                 .companyOrIndividual.value,
+                            //             onChanged: (String? value) {
+                            //               // setState(() {
+                            //               maincontroller.companyOrIndividual
+                            //                   .value = value!;
+                            //               // });
+                            //             },
+                            //           ),
+                            //         ),
+                            //       ),
+                            //     ),
+                            //   ],
+                            // ),
 
                             // updatedDropDown(
                             //     controller: maincontroller.registrationOpt,
@@ -984,7 +988,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                             //     controller: maincontroller.subAccountOpt,
                             //     items: subaccountIdentificationOptions,
                             //     hintTxt: 'Registration with'),
-                            const SizedBox(height: 16.0),
+                            // const SizedBox(height: 16.0),
                             Obx(
                               () => TextFormField(
                                 controller: maincontroller.passwordController,

@@ -118,10 +118,10 @@ class CurrencyCloudController extends GetxController {
       // Get.snackbar(backgroundColor: Colors.green, 'Success', '$data');
       print('Found the following Beneficiaries: $data');
     } else {
-      Get.snackbar(
-          backgroundColor: Colors.red,
-          'Falled ',
-          'Could not load Beneficiaries: ${response.statusCode}, ${response.body}');
+      // Get.snackbar(
+      //     backgroundColor: Colors.red,
+      //     'Falled ',
+      //     'Could not load Beneficiaries: ${response.statusCode}, ${response.body}');
       // print('Login successful! Auth token: ${response.body}');
       // Handle error response
       print('Failed Beneficiaries Status code: ${response.statusCode}');
@@ -166,10 +166,11 @@ class CurrencyCloudController extends GetxController {
       //     'Your Aunthentication token is $authToken');
       print('Login successful! Auth token: $authToken');
     } else {
-      Get.snackbar(
-          backgroundColor: Colors.red,
-          'Falled ',
-          'Your Aunthentication token is ${response.statusCode}, ${response.body}');
+      // Get.snackbar(
+      //     backgroundColor: Colors.red,
+      //     'Falled ',
+      //     'Your Aunthentication token is ${response.statusCode}, ${response.body}');
+
       // print('Login successful! Auth token: ${response.body}');
       // Handle error response
       print('Failed to login. Status code: ${response.statusCode}');

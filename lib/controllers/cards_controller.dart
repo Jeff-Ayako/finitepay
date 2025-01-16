@@ -64,6 +64,10 @@ class CardsController extends GetxController {
   final cardAmountInCents = 0.0.obs;
   final mpesaMerchantID = ''.obs;
 
+  final wasCardIssued = false.obs;
+  final merchantMpesaID = ''.obs;
+  final wasPaymentMade = false.obs;
+
   final isCardholderPresentButNoCards = false.obs;
 
   RxList<Map<String, dynamic>> flags = <Map<String, dynamic>>[
@@ -299,6 +303,23 @@ class CardsController extends GetxController {
     } catch (e) {
       return "Error decrypting: $e";
     }
+  }
+
+  getIfcardWasIssued() async {
+    await FirebaseFirestore.instance
+        .collection('MpesaPaymentIDS')
+        .doc(authenticationController.userDetails.value.email)
+        .get()
+        .then((value) {
+      value.data();
+      merchantMpesaID.value = value.data()?['MerchantID'] ?? '';
+      wasCardIssued.value = value.data()?['WasCardIssued'] ?? false;
+      wasPaymentMade.value = value.data()?['WasPaymentMade'] ?? false;
+
+      print(merchantMpesaID.value);
+      print(wasCardIssued.value);
+      print(wasPaymentMade.value);
+    });
   }
 
   Future<Map<String, dynamic>> registerNigeriaCardHolder() async {
@@ -1483,6 +1504,12 @@ class CardsController extends GetxController {
           ' Card Created Successfully.',
           backgroundColor: Colors.green,
         );
+        FirebaseFirestore.instance
+            .collection('MpesaPaymentIDS')
+            .doc(authenticationController.userDetails.value.email)
+            .update({
+          'WasCardIssued': true,
+        });
         FirebaseFirestore.instance
             .collection('mpesaData')
             .doc(mpesaMerchantID.value.toString())

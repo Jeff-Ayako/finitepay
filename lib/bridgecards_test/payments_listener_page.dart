@@ -76,6 +76,12 @@ class _PaymentStatusScreenState extends State<PaymentStatusScreen> {
           ontap: () {
             if (paymentResults ==
                 'The service request is processed successfully.') {
+              FirebaseFirestore.instance
+                  .collection('MpesaPaymentIDS')
+                  .doc(authenticationController.userDetails.value.email)
+                  .update({
+                'WasPaymentMade': true,
+              });
               // print(cardsController.cardAmountInCents.value.toString());
               cardsController.registerKenyaCardHolder();
             } else {
