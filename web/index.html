@@ -1,38 +1,119 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="$FLUTTER_BASE_HREF">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Finite Pay is an African-focused fintech company dedicated to revolutionizing cross-border business collections. We empower businesses to navigate the complexities of operating across multiple African countries by providing seamless, efficient payment solutions. Our mission is to bridge the financial gaps within Africa, enabling businesses to thrive by reducing costs, improving cash flow, and simplifying transactions across diverse currencies and regulations. Join us as we connect Africa, one payment at a time">
 
   <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="apple-mobile-web-app-title" content="finitepay">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
+  <link rel="icon" type="image/png" href="favicon.png">
 
   <title>finitepay</title>
   <link rel="manifest" href="manifest.json">
+  
+  <style id="splash-screen-style">
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .center {
+      position: relative;
+      margin-bottom: 30px; /* Adjusted to leave space for progress bar */
+    }
+
+    .progress-container {
+      width: 80%;
+      max-width: 400px;
+      background-color: #ddd;
+      border-radius: 20px;
+      margin-top: 10px;
+    }
+
+    .progress-bar {
+      height: 20px;
+      width: 0;
+      background-color: #6A5ACD; /* Progress bar color */
+      border-radius: 20px;
+      text-align: center;
+      line-height: 20px;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #000000;
+      }
+    }
+  </style>
+
+  <script id="splash-screen-script">
+    function removeSplashFromWeb() {
+      document.getElementById("splash")?.remove();
+      document.getElementById("splash-branding")?.remove();
+      document.body.style.background = "transparent";
+    }
+
+    function updateProgressBar(percentage) {
+      const progressBar = document.getElementById('progress-bar');
+      if (progressBar) {
+        progressBar.style.width = percentage + '%';
+        progressBar.innerText = percentage + '%';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const totalAssets = 100; // Simulate loading steps
+      let loadedAssets = 0;
+
+      const interval = setInterval(function () {
+        if (loadedAssets < totalAssets) {
+          loadedAssets += 1;
+          updateProgressBar(loadedAssets);
+        } else {
+          clearInterval(interval);
+        }
+      }, 30); // Simulate loading speed
+
+      // Flutter first-frame event
+      window.addEventListener('flutter-first-frame', function () {
+        removeSplashFromWeb();
+        clearInterval(interval); // Stop progress updates when app loads
+      });
+    });
+  </script>
+
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 </head>
 <body>
+  <!-- Splash Image -->
+  <picture id="splash">
+      <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x" media="(prefers-color-scheme: light)">
+      <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
+      <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="Center Icon">
+  </picture>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div id="progress-bar" class="progress-bar">0%</div>
+  </div>
+
+  <!-- Flutter JS -->
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>

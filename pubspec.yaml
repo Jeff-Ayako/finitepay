@@ -122,9 +122,9 @@ dependencies:
 flutter_native_splash:
 
   image: "assets/fwhitelogo.png"
-  color: "#FFD700"
+  color: "#000000"
   image_dark: "assets/fwhitelogo.png"
-  color_dark: "#FFD700"
+  color_dark: "#000000"
   # branding: assets/ykb.png
   # branding_dark: assets/ylb.png
   # branding_mode: bottom    
