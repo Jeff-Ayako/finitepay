@@ -19,7 +19,7 @@ class SingleCardDetailsPage extends StatelessWidget {
 
         maincontroller.currentTabIndex.value = 1;
 
-        Get.offAll(const DashBoardHomePage());
+        Get.offAll(()=> DashBoardHomePage());
 
         return true; // or false, based on your requirement
       },
@@ -39,7 +39,7 @@ class SingleCardDetailsPage extends StatelessWidget {
 
                   maincontroller.currentTabIndex.value = 1;
 
-                  Get.offAll(const DashBoardHomePage());
+                  Get.offAll(()=>  DashBoardHomePage());
                 },
                 icon: const Icon(Icons.arrow_back)),
             title: const Text("My Mastercard"),

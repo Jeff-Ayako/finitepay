@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 
@@ -132,6 +133,29 @@ class CardsController extends GetxController {
   final encryptedPinCardPinValue = ''.obs;
 
   XFile? selfieFile;
+
+  var remainingSeconds = 0.obs; // Observable to track remaining seconds.
+  Timer? _timer;
+
+  /// Start the countdown timer with a specified duration in seconds.
+  void startCountdown(int durationInSeconds) {
+    remainingSeconds.value = durationInSeconds;
+    _timer?.cancel(); // Cancel any existing timer.
+
+    _timer = Timer.periodic(Duration(seconds: 1), (timer) {
+      if (remainingSeconds.value > 0) {
+        remainingSeconds.value--; // Decrement the seconds.
+      } else {
+        timer.cancel(); // Stop the timer when it reaches 0.
+      }
+    });
+  }
+
+  /// Stop the timer if it's running.
+  void stopCountdown() {
+    _timer?.cancel();
+    remainingSeconds.value = 0; // Reset the timer value.
+  }
 
   Future<String> encryptPin(String pin) async {
     final url = Uri.parse(
@@ -524,8 +548,39 @@ class CardsController extends GetxController {
         ),
       );
     } else {
-      showLoading("Please Wait...");
+      // showLoading("Please Wait...");
       // ignore: unrelated_type_equality_checks
+
+      cardsController.startCountdown(45); // Start a 5-minute timer.
+      showDialog(
+        context: Get.context!,
+        barrierDismissible: false,
+        builder: (BuildContext context) {
+          loadingDialogContext = context;
+          return AlertDialog(
+            content: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                const CircularProgressIndicator(
+                  backgroundColor: Colors.greenAccent,
+                ),
+                Obx(() {
+                  final minutes = cardsController.remainingSeconds.value ~/ 60;
+                  final seconds = cardsController.remainingSeconds.value % 60;
+                  return Text(
+                    'Please wait in... ${seconds.toString().padLeft(2, '0')}',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                    // style: const TextStyle(
+                    //   fontWeight: FontWeight.bold,
+                    // ),
+                  );
+                })
+              ],
+            ),
+          );
+        },
+      );
 
       encryptPin(pin.text.toString()).then((value) async {
         final url = Uri.parse(
@@ -1608,7 +1663,7 @@ class CardsController extends GetxController {
 
           cardsController.amountTranscated.clear();
 
-          Get.offAll(const DashBoardHomePage());
+          // Get.offAll( DashBoardHomePage());
         });
         // Get.to(
         //   () => const CardsUnderAccountPage(),
@@ -1855,7 +1910,7 @@ class CardsController extends GetxController {
 
           maincontroller.refresh();
 
-          Get.offAll(const DashBoardHomePage())!.then((value) {
+          Get.offAll(() => DashBoardHomePage())!.then((value) {
             Get.back();
           });
         });
@@ -2084,5 +2139,12 @@ class CardsController extends GetxController {
       );
       throw Exception('Unexpected Error: $error');
     }
+  }
+
+  /// Dispose of the timer when the controller is destroyed.
+  @override
+  void onClose() {
+    _timer?.cancel();
+    super.onClose();
   }
 }

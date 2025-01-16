@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.6.0
+  sdk: ^3.5.4
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -81,7 +81,8 @@ dependencies:
   world_flags: 
   http: 
   timezone: 
-  searchfield: 
+  # searchfield: 
+  # searchfield: ^1.2.2
   image_picker: 
   uuid: 
   confetti: 
@@ -108,7 +109,7 @@ dependencies:
   flutter_mpesa_package: ^0.0.4
   qr_flutter: ^4.1.0
   smooth_page_indicator: ^1.2.0+3
-  image: ^4.5.2
+  image: 
   path_provider: ^2.1.5
 
   # flutter_mpesa_package: ^0.0.4

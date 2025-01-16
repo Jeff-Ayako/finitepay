@@ -341,7 +341,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
         _showBigPictureNotificationFURL();
         authenticationController.closeDialog();
         Get.offAll(
-          const LoginPage(),
+          () => LoginPage(),
         );
         // Navigator.of(context).pop();
         checkEmail(context, "Check Your Email",
@@ -354,7 +354,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
         authenticationController.closeDialog();
         // Navigator.of(context).pop();
         Get.offAll(
-          const LoginPage(),
+          () => LoginPage(),
         );
         showUpDismissible(context, "Account Created Successfully",
             "You can login to verify your account");
@@ -367,7 +367,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
       authenticationController.closeDialog();
       // Navigator.of(context).pop();
       Get.offAll(
-        const LoginPage(),
+        () => LoginPage(),
       );
       showUpDismissible(context, "Account Created Successfully",
           "You can login to verify your account");

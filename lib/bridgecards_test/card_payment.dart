@@ -330,14 +330,14 @@ class _CardPaymentPageState extends State<CardPaymentPage> {
                   print(cardsController.phone.text.toString().trim());
                   print(double.parse(
                       fxController.amountToPay.value.toStringAsFixed(0)));
-                  cardsController.registerKenyaCardHolder();
-                  // _onPay(
-                  //   cardsController.phone.text.toString().trim(),
-                  //   cardsController.phone.text.toString().trim(),
-                  //   double.parse(
-                  //     fxController.amountToPay.value.toStringAsFixed(0),
-                  //   ),
-                  // );
+
+                  _onPay(
+                    cardsController.phone.text.toString().trim(),
+                    cardsController.phone.text.toString().trim(),
+                    double.parse(
+                      fxController.amountToPay.value.toStringAsFixed(0),
+                    ),
+                  );
                 }
               },
               btnName: 'Pay With Mpesa',
