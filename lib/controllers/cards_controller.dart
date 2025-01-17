@@ -67,7 +67,8 @@ class CardsController extends GetxController {
   final wasCardIssued = false.obs;
   final merchantMpesaID = ''.obs;
   final wasPaymentMade = false.obs;
-
+  final amountInKes = 0.obs;
+  final amountInUsdCents = ''.obs;
   final isCardholderPresentButNoCards = false.obs;
 
   RxList<Map<String, dynamic>> flags = <Map<String, dynamic>>[
@@ -181,6 +182,29 @@ class CardsController extends GetxController {
     }
   }
 
+  Future<XFile> compressXFileForWeb(XFile xFile, int quality) async {
+    // Read the XFile into memory as bytes
+    final bytes = await xFile.readAsBytes();
+
+    // Decode the image
+    final image = img.decodeImage(bytes);
+    if (image == null) {
+      throw Exception('Could not decode image.');
+    }
+
+    // Compress the image
+    final compressedBytes = img.encodeJpg(image, quality: quality);
+
+    // Convert the compressed bytes to a new XFile (for web compatibility)
+    final compressedXFile = XFile.fromData(
+      Uint8List.fromList(compressedBytes),
+      name: 'compressed_image.jpg',
+      mimeType: 'image/jpeg',
+    );
+
+    return compressedXFile;
+  }
+
   // import 'package:flutter/foundation.dart' show kIsWeb;
 
   Future<XFile> compressXFileToXFile(XFile xFile, int quality) async {
@@ -221,7 +245,7 @@ class CardsController extends GetxController {
         imageFile = await _picker.pickImage(source: ImageSource.gallery);
         selfieFile = imageFile;
         // Compress the XFile and get a compressed XFile
-        imageFile = await compressXFileToXFile(imageFile!, 75);
+        imageFile = await compressXFileForWeb(imageFile!, 75);
       } else {
         imageFile = await _picker.pickImage(source: ImageSource.camera);
         // Compress the XFile and get a compressed XFile
@@ -315,10 +339,14 @@ class CardsController extends GetxController {
       merchantMpesaID.value = value.data()?['MerchantID'] ?? '';
       wasCardIssued.value = value.data()?['WasCardIssued'] ?? false;
       wasPaymentMade.value = value.data()?['WasPaymentMade'] ?? false;
+      amountInUsdCents.value = value.data()?['AmountInUsdCents'] ?? '';
+      amountInKes.value = value.data()?['AmountInKes'] ?? 0.0;
 
       print(merchantMpesaID.value);
       print(wasCardIssued.value);
       print(wasPaymentMade.value);
+      print(amountInUsdCents.value);
+      print(amountInKes.value);
     });
   }
 
@@ -451,6 +479,97 @@ class CardsController extends GetxController {
         backgroundColor: Colors.red,
       );
       throw Exception('Unexpected Error: $error');
+    }
+  }
+
+  validatedPostCardRegistrationDetails() {
+    firstName.text.trim();
+    lastName.text.trim();
+    nationalIDNumber.text.trim();
+    phone.text.trim();
+    address.text.trim();
+    houseNumber.text.trim();
+    pin.text.trim();
+    // phone.text.trim();
+
+    if (firstName.text.length < 2) {
+      ScaffoldMessenger.of(Get.context!).showSnackBar(
+        const SnackBar(
+          backgroundColor: Colors.red,
+          content: Text(
+            'Enter a Valid First Name',
+          ),
+        ),
+      );
+    } else if (lastName.text.length < 2) {
+      ScaffoldMessenger.of(Get.context!).showSnackBar(
+        const SnackBar(
+          backgroundColor: Colors.red,
+          content: Text(
+            'Enter a Valid Last Name',
+          ),
+        ),
+      );
+    } else if (nationalIDNumber.text.length < 8) {
+      ScaffoldMessenger.of(Get.context!).showSnackBar(
+        const SnackBar(
+          backgroundColor: Colors.red,
+          content: Text(
+            'National ID number cannot be less than 8 characters Long',
+          ),
+        ),
+      );
+    } else if (phone.text.length != 10) {
+      ScaffoldMessenger.of(Get.context!).showSnackBar(
+        const SnackBar(
+          backgroundColor: Colors.red,
+          content: Text(
+            'Phone Number cannot be less or more than 10 Characters Long',
+          ),
+        ),
+      );
+    } else if (imageUrl == '') {
+      ScaffoldMessenger.of(Get.context!).showSnackBar(
+        const SnackBar(
+          backgroundColor: Colors.red,
+          content: Text(
+            'Upload Your Selfie Image to Proceed',
+          ),
+        ),
+      );
+    } else if (address.text.isEmpty && houseNumber.text.isEmpty) {
+      ScaffoldMessenger.of(Get.context!).showSnackBar(
+        const SnackBar(
+          backgroundColor: Colors.red,
+          content: Text(
+            'Please enter You address and House Number',
+          ),
+        ),
+      );
+    } else if (frontIDImageUrl == '' && backIDImageUrl == '') {
+      ScaffoldMessenger.of(Get.context!).showSnackBar(
+        const SnackBar(
+          backgroundColor: Colors.red,
+          content: Text(
+            'Front and Back Images Of you National ID required',
+          ),
+        ),
+      );
+    } else if (pin.text.toString().length != 4) {
+      ScaffoldMessenger.of(Get.context!).showSnackBar(
+        const SnackBar(
+          backgroundColor: Colors.red,
+          content: Text(
+            'Card Pin Can Only Have 4 Numbers',
+          ),
+        ),
+      );
+    } else {
+      cardsController.cardAmountInCents.value =
+          double.parse(amountInUsdCents.value.toString());
+      // Get.snackbar('Success', 'You can continue with creation');
+      registerKenyaCardHolder();
+      // fxController.getCurrentApiConversionRates();
     }
   }
 

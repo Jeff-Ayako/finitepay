@@ -116,6 +116,7 @@ class DashPage extends StatelessWidget {
                         elevation: 1,
                         title: InkWell(
                           onTap: () {
+                            cardsController.encryptPin('1234');
                             cardsController.getIfcardWasIssued();
                           },
                           child: Image.asset(
